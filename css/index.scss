@@ -1,0 +1,47 @@
+@import 'paleta';
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+}
+
+main {
+
+    background-color: #F5F1E4;
+}
+
+.ejercicio-1 {
+    @include color-theme;
+
+    div[class*="container-"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        flex-grow: 1;
+        margin: .5rem;
+        border-radius: 10%;
+
+        &.base-color {
+            flex-grow: 1.5;
+        }
+
+        p {
+            padding-top: 50%;
+            padding-bottom: 50%;
+            text-align: center;
+        }
+    }
+}
+
+.ejercicio-2 {
+    display: flex;
+}

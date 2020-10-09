@@ -1,0 +1,27 @@
+$palettes: (
+    "blue":#4B8AF5,
+    "red": #F56751,
+    "green": #BCF52C
+);
+
+@mixin color-theme {
+    @each $name, $color in $palettes {
+        .container-#{$name} {
+            .base-color {
+                background-color: $color;
+            }
+            @include generate-scale($color);
+        }
+    }
+}
+
+@mixin generate-scale($color) {
+    @for $i from 1 through 4 {
+        .darken-#{$i} {
+            background-color: darken($color, $i * 5%);
+        }
+        .lighten-#{$i} {
+            background-color: lighten($color, $i * 5%);
+        }
+    }
+}
