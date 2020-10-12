@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.scss">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="grid-container">
+        <aside>
+            <div class="titulo-ejercicio current" data-ejercicio="ejercicio-1">
+                <h1>Ejercicio 1</h1>
+            </div>
+            <div class="titulo-ejercicio" data-ejercicio="ejercicio-2">
+                <h1>Ejercicio 2</h1>
+            </div>
+            <div class="titulo-ejercicio" data-ejercicio="ejercicio-3">
+                <h1>Ejercicio 3</h1>
+            </div>
+            <div class="titulo-ejercicio" data-ejercicio="ejercicio-4">
+                <h1>Ejercicio 4</h1>
+            </div>
+        </aside>
         <main>
-            <section class="ejercicio-1">
+            <section class="ejercicio-1 fade fade-in">
                 <div class="container-red">
                     <div class="box darken-4"><p class="color-box-text">Darken 4</p></div>
                     <div class="box darken-3"><p class="color-box-text">Darken 3</p></div>
@@ -44,7 +59,7 @@
                     <div class="box lighten-4"><p class="color-box-text">Lighten 4</p></div>
                 </div>
             </section>
-            <section class="ejercicio-2">
+            <section class="ejercicio-2 fade hidden">
                 <div class="tema-a">
                     <div class="box base-color"></div>
                     <div class="box important"></div>
@@ -62,9 +77,10 @@
                     <div class="box shadow">Box with shadow</div>
                 </div>
             </section>
-            <section data-ejercicio="ejercicio-3"></section>
-            <section data-ejercicio="ejercicio-4"></section>
+            <section class="ejercicio-3 fade hidden"></section>
+            <section class="ejercicio-4 fade hidden"></section>
         </main>
     </div>
+    <script src="./js/index.js"></script>
 </body>
 </html>

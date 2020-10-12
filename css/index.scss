@@ -1,28 +1,74 @@
 @import 'paleta';
 
 body {
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.container {
+.grid-container {
     display: grid;
+    grid-template-columns: 144px 1fr;
+    grid-template-areas: 
+        "aside maincontent";
     min-height: 100vh;
 }
 
-main {
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #E4E5F5;
+    grid-area: aside;
+    position: relative;
+    box-shadow: 0px 0 8px rgba(0, 0, 0, .7);
 
+    .titulo-ejercicio {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1px 0;
+        border-top: 1px solid rgba(0, 0, 0, .7);
+        border-bottom: 1px solid rgba(0, 0, 0, .7);
+        transition: all .2s linear;
+        cursor: pointer;
+
+        &.current {
+            color: #D95F76;
+        }        
+
+        &:hover {
+            background-color: #D7CCE6;
+        }
+    }
+}
+
+main {
     background-color: #F5F1E4;
+    grid-area: maincontent;
+}
+
+main > section {
+    opacity: 0;
+}
+
+.ejercicio-2 {
+    display: flex;
 }
 
 .ejercicio-1 {
     @include color-theme;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: calc(100% - 100px);
+    padding: 50px;
 
     div[class*="container-"] {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex: 1 0 100%;
     }
 
     .box {
@@ -42,6 +88,15 @@ main {
     }
 }
 
-.ejercicio-2 {
-    display: flex;
+// Animation
+.fade {
+    transition: opacity .2s  linear;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
 }
