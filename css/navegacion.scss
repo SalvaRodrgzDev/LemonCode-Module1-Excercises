@@ -1,0 +1,46 @@
+$navBackgroundColor: #058F99;
+$navBackgroundColorHover: #02484D;
+
+.ejercicio-3 {
+
+    .navigation {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+        }
+    }
+
+    .nav-link {
+        background-color: $navBackgroundColor;
+        padding: 2rem 0;
+        flex-grow: 1;
+        padding-left: 2rem;
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    
+
+        &:hover {
+            background-color: $navBackgroundColorHover;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .ejercicio-3 {
+
+        ul {
+            flex-flow: column;    
+        }
+    }
+}
