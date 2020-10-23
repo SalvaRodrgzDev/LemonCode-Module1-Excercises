@@ -10,11 +10,18 @@
         flex-flow: column wrap;
     }
 
+    .card-header {
+        overflow: hidden;
+    }
+
     .card-header img {
         width: 100%;
         height: auto;
     }
 
+    .card button {
+        padding: 5px 10px;
+    }
 
 }
 
