@@ -1,0 +1,2 @@
+.ejercicio-4 .card-container{display:grid;grid-template-columns:repeat(4,1fr);grid-gap:4rem}.ejercicio-4 .card,.ejercicio-4 .card-footer{display:flex;flex-flow:column wrap}.ejercicio-4 .card-header{overflow:hidden}.ejercicio-4 .card-header img{width:100%;height:auto}.ejercicio-4 .card button{padding:5px 10px}@media (max-width:768px){.ejercicio-4 .card-container{grid-template-columns:1fr}}
+/*# sourceMappingURL=cards.acb27f13.css.map */
