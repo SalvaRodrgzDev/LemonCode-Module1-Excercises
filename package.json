@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://SalvaRodrgzDev.github.io/LemonCode-Module1-Excercises",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build index.html --public-url ./ --out-dir build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "sass": "^1.27.0"
+  },
+  "dependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
