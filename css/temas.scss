@@ -1,17 +1,57 @@
 $themes: (
-    "A": (
+    "a": (
         "bgColor": #192DFF,
-        "font": ,
+        "font": "Libre Franklin",
+        "secondaryFont": "Libre Baskerville",
         "borderRadius": 10%,
-        "shadow": 5px 10px
+        "shadow": -8px 5px 3px 2px
     ),
-    "B": (
+    "b": (
         "bgColor": #F5C100,
-        "font": ,
+        "font": "Fjalla One",
+        "secondaryFont": "Average",
         "borderRadius": 0,
-        "shadow": 10px 5px
+        "shadow": 8px 5px 3px 2px
     )
 );
 
+@mixin themes {
+    @each $name, $theme in $themes {
 
+        $bgColor: map-get($theme, bgColor);
+        $font: map-get($theme, font);
+        $secondaryFont: map-get($theme, secondaryFont);
+        $borderRadius: map-get($theme, borderRadius);
+        $shadow: map-get($theme, shadow);
+
+        .tema-#{$name} {
+            .base-color {
+                background-color: $bgColor;
+            }
+
+            .important {
+                background-color: darken($bgColor, 15%);
+            }
+
+            .warning {
+                background-color: lighten($bgColor, 15%);
+            }
+
+            .font-primary {
+                font-family: $font;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            .font-secondary {
+                font-family: $secondaryFont;
+                padding-bottom: 2rem;
+            }
+
+            .shadow {
+                box-shadow: $shadow;
+            }
+        }
+    }
+}
 

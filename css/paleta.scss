@@ -25,3 +25,16 @@ $palettes: (
         }
     }
 }
+
+@mixin hideLastOnes($position) {
+    @media (max-width: 768px) {
+        @for $i from $position through 4 {
+            .darken-#{$i} {
+                display: none;
+            }
+            .lighten-#{$i} {
+                display: none;
+            }
+        }
+    }
+}
